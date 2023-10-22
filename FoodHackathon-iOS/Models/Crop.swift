@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Crop: String, Codable {
+enum Crop: String, Codable, CaseIterable, Equatable {
     case rice = "Rice"
     case wheat = "Wheat"
     case maize = "Maize"

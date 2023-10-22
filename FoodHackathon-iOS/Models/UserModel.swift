@@ -11,6 +11,7 @@ import FirebaseFirestoreSwift
 
 struct UserModel: Codable, Identifiable {
     @DocumentID var id: String?
+    var userId: String
     var displayName: String
     var phoneNumber: String
     var crops: [Crop]
@@ -18,6 +19,7 @@ struct UserModel: Codable, Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case id
+        case userId = "user_id"
         case displayName = "display_name"
         case phoneNumber = "phone_number"
         case crops
